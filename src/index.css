@@ -1,0 +1,255 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Acumin Pro";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro"),
+    url("../public/fonts/Acumin-RPro.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acumin Pro Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Italic"),
+    url("../public/fonts/Acumin-ItPro.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acumin Pro Bold";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Bold"),
+    url("../public/fonts/Acumin-BdPro.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Acumin Pro Bold Italic";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Acumin Pro Bold Italic"),
+    url("../public/fonts/Acumin-BdItPro.woff") format("woff");
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+input,
+textarea,
+button,
+select,
+a,
+label,
+span,
+div,
+p {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.hero-section {
+  background-image: linear-gradient(
+      90.09deg,
+      #82006f15 -0.18%,
+      #82006f47 168.83%
+    ),
+    url(./assets/img/top-abstract.png), url(./assets/img/bottom-abstract.png);
+  background-repeat: no-repeat;
+  background-position: top right, left bottom;
+  height: 100vh;
+}
+@media(max-width:640px){
+  .hero-section{
+    background-size: 50% 50%;
+  }
+}
+.hero {
+  background-image: url(./assets/img/hero-bg.png);
+}
+.bg-atm {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(./assets/img/atm-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  /* background-size: cover; */
+}
+.dollar-bg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(./assets/img/atm-bg.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.foreign-bg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url(./assets/img/foreign-account.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.gold-bg {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(./assets/img/gold-atm.png);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.dashboard-nav li .active {
+  border: 1px solid #82006f;
+}
+.dashboard-nav li .active svg {
+  color: #82006f;
+}
+.dashboard-nav li a:hover > svg {
+  color: #82006f;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.navigation__checkbox {
+  display: none;
+}
+
+.navigation__icon {
+  width: 1rem;
+  height: 2px;
+  background-color: #fff;
+  display: inline-block;
+}
+.navigation__icon::before,
+.navigation__icon::after {
+  width: 1.5rem;
+  height: 2px;
+  background-color: #fff;
+  display: inline-block;
+}
+.navigation__icon::before,
+.navigation__icon::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  transition: all 0.2s;
+}
+.navigation__icon::before {
+  top: -0.4rem;
+}
+.navigation__icon::after {
+  top: 0.4rem;
+}
+.navigation__button:hover .navigation__icon::before {
+  top: -0.45rem;
+}
+.navigation__button:hover .navigation__icon::after {
+  top: 0.45rem;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon {
+  background-color: transparent;
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon:after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+.navigation__checkbox:checked + .navigation__button .navigation__icon:before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.swiper {
+  margin-top: 5rem;
+}
+
+nav ul li .active {
+  color: white;
+  background-color: transparent;
+  padding: 0.8rem; 
+  position: relative; 
+  z-index: 2; 
+  height: 100%;
+}
+/* Pseudo-element for expanded background */
+nav ul li .active:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -20%; 
+  right: -20%;
+  bottom: 0;
+  background-color: black;
+  border-radius: 120px;
+  z-index: -1;
+}
+
+
+.card-bg {
+  background-image: url(./assets/img/card-bg.png);
+}
+::-webkit-calendar-picker-indicator {
+  filter: invert(1);
+}
+.linear-gradient-bg {
+  background: linear-gradient(
+    90.09deg,
+    #82006f -0.18%,
+    #ef5500 168.83%
+  ) !important;
+}
+
+.play-gradient {
+  background: linear-gradient(179.95deg, #82006f 19.37%, #ef5500 128.86%);
+}
+
+.radial-bg {
+  background-image: url(./assets/img/Ellipse.png);
+  background-repeat: no-repeat;
+}
+
+.swiper-slide {
+  height: 400px !important;
+  display: flex !important;
+}
+@media (max-width: 900px) {
+  .swiper-slide {
+    height: 450px !important;
+  }
+}
+.green {
+  background-color: #00a79d;
+}
+.purple {
+  background-color: #aa86f7;
+}
+.orange {
+  background-color: #fca326;
+}
+
+.polygon{
+
+
+width: 81.59px;
+height: 39.98px;
+left: 839.2px;
+top: 100.31px;
+
+background: linear-gradient(180deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.3) 100%);
+backdrop-filter: blur(81.5923px);
+/* Note: backdrop-filter has minimal browser support */
+border-radius: 3.26369px;
+
+}
+
+.hero {
+  background-image: url(./assets/korope-1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.select-drop {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
